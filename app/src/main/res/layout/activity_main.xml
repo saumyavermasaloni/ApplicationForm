@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <androidx.core.widget.ContentLoadingProgressBar
+                android:id="@+id/progress"
+                android:layout_width="match_parent"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:indeterminateTint="#fb6d4c"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:id="@+id/tv_error"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:visibility="visible"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="#116678"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
